@@ -1,0 +1,7 @@
+Unity is always in 3D, even when switched to 2D.
+The Z-position of sprites matters for rendering.
+Sprites further from the camera get rendered first.
+
+To avoid any problems with sprites becoming transparent or such place your sprite not on the background, but before it.
+For example, camera would be on Z= -10, sprite at Z= -5 and background Z= 0. 
+Alternatively keep the sprites where they are and move the background back.
