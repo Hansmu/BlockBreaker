@@ -50,3 +50,6 @@ To apply a physics material, add it to the collider.
 Disconnect can happen between the ball and paddle position depending on the execution order of their scrips.
 In order to have a fixed order for the script execution go into Edit -> Project Settings -> Script Execution Order...
 In our case with the Ball being executed before the Paddle, there will be no sync issues.
+
+To change the gravity for the entire project go into Edit -> Project Settings -> Physics2D.
+Could also be set in the RigidBody bu that's a bit weird.
