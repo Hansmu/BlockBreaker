@@ -22,3 +22,24 @@ To get the height we do 16/4*3, making it 12 world units high. So our camera siz
 If you set the X position to 6 and Y to 6, then the camera becomes perfectly aligned.
 
 A screenspace overlay is just relative to the screen and doesn't care about the sizes.
+
+In order to make the ball fall, we need to first add to it some physics - a rigidbody. Mass is essentially 1kg per one unit.
+Have to add something to check collision - add a circle collider from physics 2d. Collidors work by hitting other collidors.
+
+Collidors allow us to trigger events. Simulate collisions, at the heart of all physical objects interacting with each other.
+When two objects with colliders meet the engine sends a message to the objects. We intercept the message in our script.
+Our script decides what to do next. They have to intersect during a frame, if an object was moving really fast then they might
+not intersect during a frame and there would be no collision.
+
+Two types of messages are passed - one, there is a collision, non-trigger collidors interact with non-trigger collidors.
+When one or both of the objects have a trigger set, then a trigger happens.
+When a collision happens, then physics are being calculated.
+
+Types of colliders:
+Static: if it has a collider but no rigidbody
+Rigidbody: if it's got a rigidbody component
+Kinematic: if 'Kinematic' ticked on rigidbody. Doesn't move on its own.
+
+If it's going to move during the game, put a rigidbody on it. Avoid moving static colliders.
+When implementing a collider, we have to intercept one of two messsages. More on it in the script LoseCollider.
+IsTrigger makes the component ignore physics.
