@@ -53,3 +53,8 @@ In our case with the Ball being executed before the Paddle, there will be no syn
 
 To change the gravity for the entire project go into Edit -> Project Settings -> Physics2D.
 Could also be set in the RigidBody bu that's a bit weird.
+
+Prefab - collection of predefined GameObjects and Components that are re-usable throughout your game.
+Duplicate a game object and then create a prefab from it by dragging it into a folder.
+Apply changes the prefab's settings. Revert takes the copies of the prefab back to the original settings.
+The blocks in our game don't have to move so we can just keep them as static colliders.
