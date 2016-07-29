@@ -43,3 +43,6 @@ Kinematic: if 'Kinematic' ticked on rigidbody. Doesn't move on its own.
 If it's going to move during the game, put a rigidbody on it. Avoid moving static colliders.
 When implementing a collider, we have to intercept one of two messsages. More on it in the script LoseCollider.
 IsTrigger makes the component ignore physics.
+
+To make something bounce we use Physics Materials. It's used to manipulate friction and bounciness.
+To apply a physics material, add it to the collider.
