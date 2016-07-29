@@ -46,3 +46,7 @@ IsTrigger makes the component ignore physics.
 
 To make something bounce we use Physics Materials. It's used to manipulate friction and bounciness.
 To apply a physics material, add it to the collider.
+
+Disconnect can happen between the ball and paddle position depending on the execution order of their scrips.
+In order to have a fixed order for the script execution go into Edit -> Project Settings -> Script Execution Order...
+In our case with the Ball being executed before the Paddle, there will be no sync issues.
