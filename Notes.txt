@@ -58,3 +58,7 @@ Prefab - collection of predefined GameObjects and Components that are re-usable 
 Duplicate a game object and then create a prefab from it by dragging it into a folder.
 Apply changes the prefab's settings. Revert takes the copies of the prefab back to the original settings.
 The blocks in our game don't have to move so we can just keep them as static colliders.
+
+Snap to grid for elements:
+Edit -> Snap Settings...
+Hold down the ctrl button when moving to snap them into grid.
