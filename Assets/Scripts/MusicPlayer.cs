@@ -6,6 +6,7 @@ public class MusicPlayer : MonoBehaviour {
 	//Create a static variable
 	static MusicPlayer instance = null;
 
+	//Move the code into the Awake block because otherwise there is a bug with the music being played more than once due to execution order.
 	void Awake() {
 		if (instance != null) {
 			Destroy (gameObject);

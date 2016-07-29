@@ -5,3 +5,20 @@ Sprites further from the camera get rendered first.
 To avoid any problems with sprites becoming transparent or such place your sprite not on the background, but before it.
 For example, camera would be on Z= -10, sprite at Z= -5 and background Z= 0. 
 Alternatively keep the sprites where they are and move the background back.
+
+First thing when setting up our play space is that we should specify how big it is.
+An example target resolution could be an iPad air, which has a resolution of 2048x1536, the aspect ration is 1.333...
+800/600 is also compatible with that.
+We have to think about pixels per unit on the background because we have 16 blocks wide. We have an image that is 800 pixels wide.
+We want 800 pixels to map to 16 world units so one world unit per block. World units are the positions in the Unity gamespace.
+They're what you see in the transform.
+Since we have 800 width, 16 units, we're going for 50 blocks per unit.
+
+Ortographic camera doesn't consider how far an object is away from it. A perspective camera does.
+Move the camera to the image's edge to see how wide it is. To the left and to the right and then consider the X sizes.
+
+To mark the camera height, then consider that in our example our playspace is 16 units wide and our aspect ratio is 4/3 aka 1.33..
+To get the height we do 16/4*3, making it 12 world units high. So our camera size should be 6, because that's half of it.
+If you set the X position to 6 and Y to 6, then the camera becomes perfectly aligned.
+
+A screenspace overlay is just relative to the screen and doesn't care about the sizes.
