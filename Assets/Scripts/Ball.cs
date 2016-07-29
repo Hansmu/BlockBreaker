@@ -4,6 +4,8 @@ using System.Collections;
 public class Ball : MonoBehaviour {
 
 	public Paddle paddle;
+
+	private bool hasGameStarted = false;
 	private Vector3 paddleToBallVector;
 
 	// Use this for initialization
@@ -13,6 +15,14 @@ public class Ball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position = paddle.transform.position + paddleToBallVector;
+		if (!hasGameStarted) {
+			this.transform.position = paddle.transform.position + paddleToBallVector;
+
+			if (Input.GetMouseButton (0)) {
+				print("Mouse clicked.");
+				hasGameStarted = true;
+				this.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 10f);
+			}
+		}
 	}
 }
