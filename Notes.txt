@@ -62,3 +62,6 @@ The blocks in our game don't have to move so we can just keep them as static col
 Snap to grid for elements:
 Edit -> Snap Settings...
 Hold down the ctrl button when moving to snap them into grid.
+
+If you drop all prefabs into the Hierarchy rather than onto the scene, then they'll keep their default positions.
+You lose the object references with it then.
