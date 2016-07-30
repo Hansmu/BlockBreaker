@@ -4,6 +4,7 @@ using System.Collections;
 public class Brick : MonoBehaviour {
 
 	public int maxHits;
+	public Sprite[] hitSprites;
 
 	private LevelManager levelManager;
 	private int timesHit;
@@ -23,7 +24,13 @@ public class Brick : MonoBehaviour {
 		timesHit++;
 		if (timesHit >= maxHits) {
 			Destroy(gameObject); //This would be a brick and not a gameObject.
+		} else {
+			LoadSprites();
 		}
+	}
+		
+	void LoadSprites() {
+		this.GetComponent<SpriteRenderer>().sprite = hitSprites[timesHit - 1];
 	}
 
 	// TODO Remove this method once we can actually win.
