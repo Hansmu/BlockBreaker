@@ -9,10 +9,11 @@ public class LoseCollider : MonoBehaviour {
 	//Expose the LevelManager
 	//Connect it via Unity by dragging and dropping.
 	//Adding it here will create a new field in Unity's script.
-	public LevelManager levelManager;
+	private LevelManager levelManager;
+
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		print("Trigger");
+		levelManager = GameObject.FindObjectOfType<LevelManager>();
 		levelManager.LoadLevel ("Win");
 	}
 
