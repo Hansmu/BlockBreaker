@@ -14,4 +14,10 @@ public class LevelManager : MonoBehaviour {
 	public void LoadNextLevel() { //You have to consider the build settings with this, they have to be in the right order.
 		Application.LoadLevel(Application.loadedLevel + 1);
 	}
+
+	public void BrickDestroyed() {
+		if (Brick.breakableCount <= 0) {
+			LoadNextLevel();
+		}
+	}
 }

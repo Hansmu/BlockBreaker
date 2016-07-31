@@ -13,7 +13,6 @@ public class Paddle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float mousePositionInBlocks = Input.mousePosition.x / Screen.width * WORLD_UNITS;
-		print(mousePositionInBlocks);
 
 		//This refers to the script that is connected with the object.
 		Vector3 paddlePosition = new Vector3(
