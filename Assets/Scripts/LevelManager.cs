@@ -4,6 +4,7 @@ using System.Collections;
 public class LevelManager : MonoBehaviour {
 	//Just using it to load a new level.
 	public void LoadLevel(string name) {
+		Brick.breakableCount = 0;
 		Application.LoadLevel(name);
 	}
 
