@@ -19,9 +19,16 @@ public class Ball : MonoBehaviour {
 			this.transform.position = paddle.transform.position + paddleToBallVector;
 
 			if (Input.GetMouseButton (0)) {
+				GetComponent<AudioSource>().Play();
 				hasGameStarted = true;
 				this.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 10f);
 			}
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D collision){
+		if (hasGameStarted) {
+			GetComponent<AudioSource>().Play();
 		}
 	}
 }
