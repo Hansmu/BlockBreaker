@@ -47,10 +47,11 @@ public class Brick : MonoBehaviour {
 	}
 		
 	void LoadSprites() {
-		if (hitSprites[timesHit - 1]) {
-			this.GetComponent<SpriteRenderer>().sprite = hitSprites[timesHit - 1];
+		if (hitSprites [timesHit - 1]) {
+			this.GetComponent<SpriteRenderer> ().sprite = hitSprites [timesHit - 1];
+		} else {
+			Debug.LogError("Brick sprite missing!");
 		}
-
 	}
 
 	// TODO Remove this method once we can actually win.
