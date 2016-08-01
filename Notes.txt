@@ -71,3 +71,5 @@ When you add a new scene, then you have to add it to the build settings, otherwi
 Sprite sheet: a set of images that are related to the various animation states in the game. Or just states.
 
 The affordance principle - the player should always know what to do next.
+
+To add a more complex collider add a Polygon Collider. Can shape it as you wish. If you mess up, hold down ctrl and click, that'll remove the last point.
