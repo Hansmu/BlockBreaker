@@ -73,3 +73,6 @@ Sprite sheet: a set of images that are related to the various animation states i
 The affordance principle - the player should always know what to do next.
 
 To add a more complex collider add a Polygon Collider. Can shape it as you wish. If you mess up, hold down ctrl and click, that'll remove the last point.
+
+Particle systems are for effects like moving liquids, smoke, clouds etc. They can be used to capture the inherent fluidity and energy.
+To add one, create a new GameObject, attach to it a Particle System. Duration means the length of the loop. Lifetime means how long the particles will live.
